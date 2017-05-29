@@ -1,0 +1,17 @@
+﻿<div class="auto-complete">
+    <ul title="choose one or add...">
+        <li ng-style="{'background-color': bgColor,'color': color }" ng-repeat="tag in selectedFromList">
+            {{tag.name}}
+            <span ng-click="remove($index)" title="remove">X</span>
+        </li>
+        <li>
+            <input list="autoComplete_{{uuid}}" ng-model="value" ng-keypress="add($event, value, 'name')">
+        </li>
+    </ul>
+    <small>{{alerts.exist ? 'item is exist...':null}}{{alerts.empty ? 'item is empty...':null}}</small>
+</div>
+
+
+<datalist id="autoComplete_{{uuid}}">
+    <option ng-repeat="item in list" ng-value="item[key]">
+</datalist>

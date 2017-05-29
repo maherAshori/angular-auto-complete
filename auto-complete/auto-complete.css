@@ -1,0 +1,45 @@
+﻿div.auto-complete ul {
+    margin: 0;
+    padding: 0;
+    border: solid 1px #ccc;
+    position: relative;
+}
+
+    div.auto-complete ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 5px 0 5px 25px;
+        padding: 5px 15px;
+        position: relative;
+        cursor: default;
+    }
+
+        div.auto-complete ul li span {
+            content: "X";
+            position: absolute;
+            left: 100%;
+            top: 0;
+            bottom: 0;
+            padding: 0 5px;
+            background-color: #ccc;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        div.auto-complete ul li:last-child {
+            background: none;
+            padding: 0;
+            width: 100%;
+            margin: 0;
+        }
+
+            div.auto-complete ul li:last-child:after {
+                display: none;
+            }
+
+        div.auto-complete ul li input {
+            outline: none;
+            border: none;
+            width: 100%;
+            padding: 10px 15px;
+        }
